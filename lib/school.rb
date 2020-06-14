@@ -1,20 +1,15 @@
 class School
-    attr_reader :name
-
-    ROSTER = {}
+    attr_reader :name, :roster
 
     def initialize(name)
         @name = name
-        @ROSTER = {}
+        @roster = Hash.new {|h, k| h[k] = []}
     end
 
-    def initialize(student, age)
-        @student = student
-        @age = age
-        ROSTER << student
+    def add_student(name, grade)
+        self.roster[grade] << name
     end
 
-    def roster
-        @ROSTER
-    end
+    def 
+
 end
